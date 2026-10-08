@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-labelledby="title desc">
+  <title id="title">Lening Li — Robotics, learning, and intelligent systems</title>
+  <desc id="desc">A motion-planning tree with a highlighted path from start to goal.</desc>
+  <defs>
+    <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#213044"/></pattern>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5eead4" stop-opacity=".10"/><stop offset="1" stop-color="#5eead4" stop-opacity="0"/></linearGradient>
+  </defs>
+  <style>
+    .pulse { animation: pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .route { animation: travel 12s linear infinite; }
+    @keyframes pulse { 50% { opacity: .35; transform: scale(1.5); } }
+    @keyframes travel { to { stroke-dashoffset: -100; } }
+    @media (prefers-reduced-motion: reduce) { .pulse, .route { animation: none; } }
+  </style>
+  <rect width="1000" height="300" rx="20" fill="#0d1726"/>
+  <rect width="1000" height="300" rx="20" fill="url(#grid)"/>
+  <rect width="1000" height="300" rx="20" fill="url(#wash)"/>
+  <g font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+    <text x="48" y="61" fill="#5eead4" font-size="12" font-weight="600" letter-spacing="3">ROBOTICS / LEARNING / INTELLIGENT SYSTEMS</text>
+    <text x="44" y="145" fill="#f1f5f9" font-size="65" font-weight="700" letter-spacing="-2">Lening Li</text>
+    <text x="48" y="187" fill="#9bafc4" font-size="20">From high-level goals to real-world action.</text>
+    <rect x="48" y="226" width="28" height="3" rx="1.5" fill="#5eead4"/>
+    <text x="88" y="232" fill="#9bafc4" font-size="13" letter-spacing="1">@leelening</text>
+  </g>
+  <g fill="none" stroke="#3d6070" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M651 245L698 207L673 162L713 132L690 86M698 207L756 224L787 195M713 132L762 113L747 66M762 113L811 132L853 100L884 120M811 132L823 174L870 186L900 225M823 174L796 237M853 100L865 61L914 45M870 186L927 168L945 131M914 45L939 80"/>
+    <path d="M651 245L635 190L653 130M673 162L629 153M756 224L745 263M811 132L813 81M927 168L949 194"/>
+  </g>
+  <g fill="#3d6070">
+    <circle cx="673" cy="162" r="3"/><circle cx="756" cy="224" r="3"/><circle cx="747" cy="66" r="3"/><circle cx="823" cy="174" r="3"/><circle cx="870" cy="186" r="3"/><circle cx="927" cy="168" r="3"/><circle cx="690" cy="86" r="3"/>
+  </g>
+  <path d="M651 245L698 207L713 132L762 113L811 132L853 100L865 61L914 45" fill="none" stroke="#5eead4" stroke-width="3" opacity=".25"/>
+  <path class="route" d="M651 245L698 207L713 132L762 113L811 132L853 100L865 61L914 45" fill="none" stroke="#5eead4" stroke-width="3" stroke-dasharray="6 6"/>
+  <circle cx="651" cy="245" r="5" fill="#5eead4"/>
+  <circle class="pulse" cx="914" cy="45" r="12" fill="none" stroke="#5eead4" opacity=".65"/>
+  <circle cx="914" cy="45" r="5" fill="#5eead4"/>
+  <g fill="#9bafc4" font-family="ui-monospace, monospace" font-size="10" letter-spacing="1"><text x="614" y="273">START</text><text x="909" y="22">GOAL</text></g>
+</svg>
